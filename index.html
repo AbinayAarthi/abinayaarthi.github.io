@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video Editor Portfolio</title>
+<meta name="description" content="Portfolio of a video editor: short-form, YouTube, motion graphics and editing quality control.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#home" data-fill="name">Your Name</a>
+  <nav aria-label="Main">
+    <a href="#showreel">Showreel</a>
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+  <p class="kicker"><span data-fill="role">Deputy Chief Editor</span>, Studio Coup</p>
+  <h1>Video editing, from first cut to final check.</h1>
+  <p class="lead">I edit short-form content, YouTube videos and motion graphics, and I review edits for quality before they are delivered.</p>
+  <div class="actions">
+    <a class="btn primary" href="#showreel">Watch showreel</a>
+    <a class="btn" href="#contact">Get in touch</a>
+  </div>
+  <div class="ruler" aria-hidden="true"><span class="playhead"></span></div>
+</section>
+
+<section id="showreel">
+  <h2>Showreel</h2>
+  <div id="reel" class="frame"></div>
+  <p class="caption" id="reelNote"></p>
+</section>
+
+<section id="work">
+  <h2>Selected work</h2>
+  <p class="intro">A few projects I have edited, with a note on what I did in each.</p>
+  <div id="projects" class="grid"></div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="cols">
+    <div>
+      <h3>Editing</h3>
+      <ul class="plain">
+        <li>Video editing</li>
+        <li>Short-form content</li>
+        <li>YouTube videos</li>
+        <li>Motion graphics</li>
+        <li>Editing quality control</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Software</h3>
+      <ul class="plain">
+        <li><strong>Adobe Premiere Pro</strong> <span class="tag">primary</span></li>
+        <li>Adobe After Effects</li>
+        <li>Adobe Photoshop</li>
+        <li>DaVinci Resolve</li>
+        <li>Canva</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <article class="job">
+    <div class="job-head">
+      <div>
+        <h3>Deputy Chief Editor</h3>
+        <p class="org">Studio Coup / Coup Media Productions LLP</p>
+      </div>
+      <p class="dates" data-fill="dates">[Start year] to present</p>
+    </div>
+    <ul class="plain">
+      <li>Edit video content, including short-form videos, YouTube videos and motion graphics.</li>
+      <li>Review edits for quality before they are finalised.</li>
+      <li>Coordinate with team members on edits and revisions.</li>
+    </ul>
+    <p class="note">Edit these lines in index.html to match your role exactly.</p>
+  </article>
+</section>
+
+<section id="about">
+  <h2>About me</h2>
+  <div class="about">
+    <p>I am a video editor with an MA in English Literature. Studying literature taught me how structure, pacing and word choice shape the way people understand a story, and I bring the same attention to every edit.</p>
+    <p>At Studio Coup I work on a range of formats and also check the quality of edits. I am looking for Senior Video Editor, Lead Video Editor and Video Editor roles.</p>
+    <p class="note">This is a draft. Rewrite it in your own words.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="intro">Open to Senior Video Editor, Lead Video Editor and Video Editor roles.</p>
+  <ul id="contactList" class="plain contact"></ul>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> <span data-fill="name">Your Name</span></p>
+</footer>
+
+<script src="content.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
