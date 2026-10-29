@@ -4,116 +4,111 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Video Editor Portfolio</title>
-<meta name="description" content="Portfolio of a video editor: short-form, YouTube, motion graphics and editing quality control.">
+<meta name="description" content="Video editor portfolio: short-form, YouTube, motion graphics and editing quality control.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<canvas id="stars" aria-hidden="true"></canvas>
 
 <header class="nav">
   <a class="brand" href="#home" data-fill="name">Your Name</a>
-  <nav aria-label="Main">
-    <a href="#showreel">Showreel</a>
-    <a href="#work">Work</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav id="menu" aria-label="Main">
     <a href="#about">About</a>
+    <a href="#showreel">Showreel</a>
+    <a href="#skills">Skills</a>
+    <a href="#work">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <main>
-
 <section id="home" class="hero">
-  <p class="kicker"><span data-fill="role">Deputy Chief Editor</span>, Studio Coup</p>
-  <h1>Video editing, from first cut to final check.</h1>
-  <p class="lead">I edit short-form content, YouTube videos and motion graphics, and I review edits for quality before they are delivered.</p>
+  <p class="role" data-fill="role">Deputy Chief Editor</p>
+  <h1>Precise Edits,<br><span class="grad">Quality Checked.</span></h1>
+  <p class="lead">Short-form content, YouTube videos and motion graphics, reviewed for quality before delivery.</p>
   <div class="actions">
-    <a class="btn primary" href="#showreel">Watch showreel</a>
-    <a class="btn" href="#contact">Get in touch</a>
+    <a class="btn primary" href="#work">View Projects</a>
+    <a class="btn ghost" id="heroResume" href="#resume" hidden>Download Resume</a>
   </div>
-  <div class="ruler" aria-hidden="true"><span class="playhead"></span></div>
+</section>
+
+<section id="about">
+  <h2>About <span class="grad">Me</span></h2>
+  <div class="bar"></div>
+  <div class="about-text">
+    <p>I am a video editor with an MA in English Literature. Studying literature taught me how structure, pacing and word choice shape the way people understand a story, and I bring the same attention to every edit.</p>
+    <p>At Studio Coup I work on a range of formats and also check the quality of edits. <em class="note">Draft text. Rewrite it in your own words.</em></p>
+  </div>
+  <div class="facts">
+    <div class="glass"><b>MA</b><span>English Literature</span></div>
+    <div class="glass"><b>Deputy Chief Editor</b><span>Studio Coup</span></div>
+    <div class="glass"><b>Open to</b><span>Senior, Lead and Video Editor roles</span></div>
+  </div>
 </section>
 
 <section id="showreel">
-  <h2>Showreel</h2>
-  <div id="reel" class="frame"></div>
+  <h2>Show<span class="grad">reel</span></h2>
+  <div class="bar"></div>
+  <div id="reel" class="frame glass"></div>
   <p class="caption" id="reelNote"></p>
 </section>
 
+<section id="skills">
+  <h2>Creative <span class="grad">Toolkit</span></h2>
+  <div class="bar"></div>
+  <div class="skill-grid">
+    <div class="glass"><h3>Editing</h3><div class="pills"><span>Video editing</span><span>Short-form content</span><span>YouTube videos</span><span>Motion graphics</span></div></div>
+    <div class="glass"><h3>Quality &amp; Team</h3><div class="pills"><span>Editing quality control</span><span>Team coordination</span><span>Review and revisions</span></div></div>
+    <div class="glass"><h3>Tools</h3><div class="pills"><span class="hot">Adobe Premiere Pro (primary)</span><span>Adobe After Effects</span><span>Adobe Photoshop</span><span>DaVinci Resolve</span><span>Canva</span></div></div>
+  </div>
+</section>
+
 <section id="work">
-  <h2>Selected work</h2>
-  <p class="intro">A few projects I have edited, with a note on what I did in each.</p>
+  <h2>Featured <span class="grad">Projects</span></h2>
+  <div class="bar"></div>
   <div id="projects" class="grid"></div>
 </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="cols">
-    <div>
-      <h3>Editing</h3>
-      <ul class="plain">
-        <li>Video editing</li>
-        <li>Short-form content</li>
-        <li>YouTube videos</li>
-        <li>Motion graphics</li>
-        <li>Editing quality control</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Software</h3>
-      <ul class="plain">
-        <li><strong>Adobe Premiere Pro</strong> <span class="tag">primary</span></li>
-        <li>Adobe After Effects</li>
-        <li>Adobe Photoshop</li>
-        <li>DaVinci Resolve</li>
-        <li>Canva</li>
-      </ul>
-    </div>
+<section id="resume">
+  <h2>My <span class="grad">Resume</span></h2>
+  <div class="bar"></div>
+  <div class="glass resume-card">
+    <div class="icon" aria-hidden="true">&#9636;</div>
+    <h3>Download My Resume</h3>
+    <p id="resumeText">Experience, skills and education in one page.</p>
+    <a class="btn primary" id="resumeBtn" href="#" hidden>Download PDF</a>
   </div>
 </section>
 
 <section id="experience">
-  <h2>Experience</h2>
-  <article class="job">
-    <div class="job-head">
-      <div>
-        <h3>Deputy Chief Editor</h3>
-        <p class="org">Studio Coup / Coup Media Productions LLP</p>
-      </div>
-      <p class="dates" data-fill="dates">[Start year] to present</p>
-    </div>
-    <ul class="plain">
-      <li>Edit video content, including short-form videos, YouTube videos and motion graphics.</li>
-      <li>Review edits for quality before they are finalised.</li>
-      <li>Coordinate with team members on edits and revisions.</li>
-    </ul>
-    <p class="note">Edit these lines in index.html to match your role exactly.</p>
-  </article>
-</section>
-
-<section id="about">
-  <h2>About me</h2>
-  <div class="about">
-    <p>I am a video editor with an MA in English Literature. Studying literature taught me how structure, pacing and word choice shape the way people understand a story, and I bring the same attention to every edit.</p>
-    <p>At Studio Coup I work on a range of formats and also check the quality of edits. I am looking for Senior Video Editor, Lead Video Editor and Video Editor roles.</p>
-    <p class="note">This is a draft. Rewrite it in your own words.</p>
-  </div>
+  <h2>Work <span class="grad">Experience</span></h2>
+  <div class="bar"></div>
+  <div id="jobs" class="jobs"></div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p class="intro">Open to Senior Video Editor, Lead Video Editor and Video Editor roles.</p>
-  <ul id="contactList" class="plain contact"></ul>
+  <h2>Get In <span class="grad">Touch</span></h2>
+  <div class="bar"></div>
+  <div class="contact-wrap">
+    <form id="form" class="glass">
+      <label>Name<input name="name" required autocomplete="name"></label>
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <label>Message<textarea name="msg" rows="5" required></textarea></label>
+      <button class="btn primary" type="submit">Send Message</button>
+      <p class="note">Opens your email app with the message ready to send.</p>
+    </form>
+    <ul id="contactList" class="contact"></ul>
+  </div>
 </section>
-
 </main>
 
-<footer>
-  <p>&copy; <span id="year"></span> <span data-fill="name">Your Name</span></p>
-</footer>
+<footer><p>&copy; <span id="year"></span> <span data-fill="name">Your Name</span>. All rights reserved.</p></footer>
 
 <script src="content.js"></script>
 <script src="main.js"></script>
