@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Video Editor Portfolio</title>
-<meta name="description" content="Video editor portfolio: short-form, YouTube, motion graphics and editing quality control.">
+<meta name="description" content="Video editor portfolio: short-form content, Instagram Reels, motion graphics and editing quality control.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,13 +14,13 @@
 <canvas id="stars" aria-hidden="true"></canvas>
 
 <header class="nav">
-  <a class="brand" href="#home" data-fill="name">Your Name</a>
+  <a class="brand" href="#home" data-fill="name">Abinaya Aarthi S.</a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   <nav id="menu" aria-label="Main">
     <a href="#about">About</a>
-    <a href="#showreel">Showreel</a>
+    <a href="#showreel" id="navReel">Showreel</a>
     <a href="#skills">Skills</a>
-    <a href="#work">Projects</a>
+    <a href="#work" id="navWork">Projects</a>
     <a href="#resume">Resume</a>
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
@@ -29,11 +29,11 @@
 
 <main>
 <section id="home" class="hero">
-  <p class="role" data-fill="role">Deputy Chief Editor</p>
+  <p class="role" data-fill="role">Video Editor | Former Deputy Chief Editor</p>
   <h1>Precise Edits,<br><span class="grad">Quality Checked.</span></h1>
-  <p class="lead">Short-form content, YouTube videos and motion graphics, reviewed for quality before delivery.</p>
+  <p class="lead">Short-form content, Instagram Reels and motion graphics, reviewed for quality before delivery.</p>
   <div class="actions">
-    <a class="btn primary" href="#work">View Projects</a>
+    <a class="btn primary" href="#experience">View Experience</a>
     <a class="btn ghost" id="heroResume" href="#resume" hidden>Download Resume</a>
   </div>
 </section>
@@ -42,12 +42,12 @@
   <h2>About <span class="grad">Me</span></h2>
   <div class="bar"></div>
   <div class="about-text">
-    <p>I am a video editor with an MA in English Literature. Studying literature taught me how structure, pacing and word choice shape the way people understand a story, and I bring the same attention to every edit.</p>
-    <p>At Studio Coup I work on a range of formats and also check the quality of edits. <em class="note">Draft text. Rewrite it in your own words.</em></p>
+    <p>I am a video editor with 1.5 years of professional experience in short-form video editing, Instagram Reels and talking-head content. My M.A. in English taught me how structure, pacing and word choice shape the way people understand a story, and I bring the same attention to every edit.</p>
+    <p>At Studio Coup I edited client-focused social media content and was promoted to Deputy Chief Editor in August 2026, taking on editor coordination, quality control and client feedback management.</p>
   </div>
   <div class="facts">
-    <div class="glass"><b>MA</b><span>English Literature</span></div>
-    <div class="glass"><b>Deputy Chief Editor</b><span>Studio Coup</span></div>
+    <div class="glass"><b>M.A. English</b><span>Ethiraj College for Women</span></div>
+    <div class="glass"><b>Former Deputy Chief Editor</b><span>Studio Coup</span></div>
     <div class="glass"><b>Open to</b><span>Senior, Lead and Video Editor roles</span></div>
   </div>
 </section>
@@ -63,9 +63,9 @@
   <h2>Creative <span class="grad">Toolkit</span></h2>
   <div class="bar"></div>
   <div class="skill-grid">
-    <div class="glass"><h3>Editing</h3><div class="pills"><span>Video editing</span><span>Short-form content</span><span>YouTube videos</span><span>Motion graphics</span></div></div>
-    <div class="glass"><h3>Quality &amp; Team</h3><div class="pills"><span>Editing quality control</span><span>Team coordination</span><span>Review and revisions</span></div></div>
-    <div class="glass"><h3>Tools</h3><div class="pills"><span class="hot">Adobe Premiere Pro (primary)</span><span>Adobe After Effects</span><span>Adobe Photoshop</span><span>DaVinci Resolve</span><span>Canva</span></div></div>
+    <div class="glass"><h3>Editing</h3><div class="pills"><span>Short-form &amp; Reels editing</span><span>Motion graphics &amp; stylised effects</span><span>Pacing, hooks &amp; storytelling</span><span>Captions &amp; on-screen text</span><span>Sound sync &amp; audio balance</span><span>Scriptwriting &amp; storyboarding</span></div></div>
+    <div class="glass"><h3>Quality &amp; Team</h3><div class="pills"><span>Editing quality control</span><span>Team coordination</span><span>Client feedback &amp; revisions</span></div></div>
+    <div class="glass"><h3>Tools</h3><div class="pills"><span class="hot">Adobe Premiere Pro (primary)</span><span class="hot">Adobe After Effects (primary)</span><span>Adobe Photoshop</span><span>DaVinci Resolve</span><span>Canva</span></div></div>
   </div>
 </section>
 
@@ -108,7 +108,7 @@
 </section>
 </main>
 
-<footer><p>&copy; <span id="year"></span> <span data-fill="name">Your Name</span>. All rights reserved.</p></footer>
+<footer><p>&copy; <span id="year"></span> <span data-fill="name">Abinaya Aarthi S.</span>. All rights reserved.</p></footer>
 
 <script src="content.js"></script>
 <script src="main.js"></script>

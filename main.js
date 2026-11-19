@@ -13,6 +13,11 @@
   burger.onclick = () => { const o = menu.classList.toggle('open'); burger.setAttribute('aria-expanded', o); };
   menu.querySelectorAll('a').forEach(a => a.onclick = () => { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); });
 
+  // Hide sections that have no content yet
+  const hideSection = (secId, linkId) => { $(secId).hidden = true; $(linkId).hidden = true; };
+  if (!SITE.showreel) hideSection('showreel', 'navReel');
+  if (!PROJECTS.filter(p => p.title).length) hideSection('work', 'navWork');
+
   // Showreel
   const id = SITE.showreel && ytId(SITE.showreel);
   $('reel').innerHTML = id
