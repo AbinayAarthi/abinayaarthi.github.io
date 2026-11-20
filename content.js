@@ -111,5 +111,13 @@ const PROJECTS = [
     link: "reel-ai.mp4",
     start: 7.5,
     thumbnail: "thumb-ai.jpg"
+  },
+  {
+    title: "AI Jobs Need Skills, Not Just Tools",
+    style: "Short-form, Motion graphics, Talking-head",
+    contribution: "Talking-head Reel built around animated title cards, floating app-icon graphics, an animated hourglass and neural-network visuals.",
+    link: "reel-aijobs.mp4",
+    start: 8,
+    thumbnail: "thumb-aijobs.jpg"
   }
 ];
