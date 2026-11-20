@@ -64,6 +64,7 @@ const EXPERIENCE = [
 /* PROJECTS: copy a block from { to }, with its comma, to add one.
    While this list is empty, the Projects section stays hidden.
    style: separate tags with commas, e.g. "Short-form, Motion graphics"
+   start: second where the video begins playing (the motion graphics moment). Use 0 or leave out to play from the start.
    thumbnail: image file name uploaded to GitHub, e.g. "thumb1.jpg" ("" = none)
    link: your video link, or a video file uploaded next to this file, e.g. "reel-bridal.mp4" ("" = "Link coming soon")
 
@@ -76,6 +77,7 @@ const PROJECTS = [
     style: "Short-form, Talking-head, Captions",
     contribution: "Vertical Reel edited with styled captions, cutaway visuals and graphic callouts around a talking-head interview.",
     link: "reel-bridal.mp4",
+    start: 21,
     thumbnail: "thumb-bridal.jpg"
   },
   {
@@ -83,6 +85,7 @@ const PROJECTS = [
     style: "Short-form, Talking-head, Motion graphics",
     contribution: "Talking-head Reel with bold text callouts, B-roll and graphics that compare sugar and smoking.",
     link: "reel-sugar.mp4",
+    start: 11,
     thumbnail: "thumb-sugar.jpg"
   },
   {
@@ -90,6 +93,7 @@ const PROJECTS = [
     style: "Short-form, Talking-head, Motion graphics",
     contribution: "Talking-head Reel with animated title graphics, captions and illustrative visuals that explain period length.",
     link: "reel-cycle.mp4",
+    start: 13.5,
     thumbnail: "thumb-cycle.jpg"
   },
   {
@@ -97,6 +101,7 @@ const PROJECTS = [
     style: "Short-form, Talking-head, Captions",
     contribution: "Fast-paced talking-head Reel with Tamil-English captions, screen graphics and B-roll on the open-source algorithm.",
     link: "reel-algo.mp4",
+    start: 5.5,
     thumbnail: "thumb-algo.jpg"
   },
   {
@@ -104,6 +109,7 @@ const PROJECTS = [
     style: "Short-form, Talking-head, Captions",
     contribution: "Talking-head Reel with bold on-screen text and cutaway visuals on the risks of fake AI content.",
     link: "reel-ai.mp4",
+    start: 7.5,
     thumbnail: "thumb-ai.jpg"
   }
 ];

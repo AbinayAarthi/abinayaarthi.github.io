@@ -37,7 +37,7 @@
   PROJECTS.filter(p => p.title).forEach(p => {
     const thumb = p.thumbnail ? '<img src="' + esc(p.thumbnail) + '" alt="Thumbnail for ' + esc(p.title) + '" loading="lazy">' : '<span class="ph">Thumbnail</span>';
     const isVid = /\.(mp4|webm)$/i.test(p.link || '');
-    const vd = isVid ? ' data-video="' + esc(p.link) + '" data-title="' + esc(p.title) + '"' : '';
+    const vd = isVid ? ' data-video="' + esc(p.link) + '" data-start="' + (Number(p.start) || 0) + '" data-title="' + esc(p.title) + '"' : '';
     const media = p.link ? '<a class="thumb' + (isVid ? ' vid' : '') + '" href="' + esc(p.link) + '" target="_blank" rel="noopener" aria-label="Watch ' + esc(p.title) + '"' + vd + '>' + thumb + '</a>' : '<div class="thumb">' + thumb + '</div>';
     const tags = String(p.style).split(',').map(t => t.trim()).filter(Boolean).map(t => '<span>' + esc(t) + '</span>').join('');
     const act = p.link ? '<a class="btn primary small" href="' + esc(p.link) + '" target="_blank" rel="noopener"' + vd + '>Watch</a>' : '<span class="soon">Link coming soon</span>';
@@ -56,7 +56,7 @@
   const closeVid = () => { vid.pause(); vid.removeAttribute('src'); vid.load(); box.hidden = true; document.body.style.overflow = ''; };
   document.querySelectorAll('[data-video]').forEach(a => a.addEventListener('click', e => {
     e.preventDefault();
-    vid.src = a.dataset.video; vid.setAttribute('aria-label', a.dataset.title || 'Video');
+    vid.src = a.dataset.video + (Number(a.dataset.start) ? '#t=' + a.dataset.start : ''); vid.setAttribute('aria-label', a.dataset.title || 'Video');
     box.hidden = false; document.body.style.overflow = 'hidden'; vid.play().catch(() => {});
   }));
   box.addEventListener('click', e => { if (e.target === box || e.target.classList.contains('vclose')) closeVid(); });
