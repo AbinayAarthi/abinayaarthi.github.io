@@ -36,14 +36,31 @@
   // Projects
   PROJECTS.filter(p => p.title).forEach(p => {
     const thumb = p.thumbnail ? '<img src="' + esc(p.thumbnail) + '" alt="Thumbnail for ' + esc(p.title) + '" loading="lazy">' : '<span class="ph">Thumbnail</span>';
-    const media = p.link ? '<a class="thumb" href="' + esc(p.link) + '" target="_blank" rel="noopener" aria-label="Watch ' + esc(p.title) + '">' + thumb + '</a>' : '<div class="thumb">' + thumb + '</div>';
+    const isVid = /\.(mp4|webm)$/i.test(p.link || '');
+    const vd = isVid ? ' data-video="' + esc(p.link) + '" data-title="' + esc(p.title) + '"' : '';
+    const media = p.link ? '<a class="thumb' + (isVid ? ' vid' : '') + '" href="' + esc(p.link) + '" target="_blank" rel="noopener" aria-label="Watch ' + esc(p.title) + '"' + vd + '>' + thumb + '</a>' : '<div class="thumb">' + thumb + '</div>';
     const tags = String(p.style).split(',').map(t => t.trim()).filter(Boolean).map(t => '<span>' + esc(t) + '</span>').join('');
-    const act = p.link ? '<a class="btn primary small" href="' + esc(p.link) + '" target="_blank" rel="noopener">Watch</a>' : '<span class="soon">Link coming soon</span>';
+    const act = p.link ? '<a class="btn primary small" href="' + esc(p.link) + '" target="_blank" rel="noopener"' + vd + '>Watch</a>' : '<span class="soon">Link coming soon</span>';
     const c = document.createElement('article');
     c.className = 'glass card';
     c.innerHTML = media + '<h3>' + esc(p.title) + '</h3><p>' + esc(p.contribution) + '</p><div class="pills">' + tags + '</div>' + act;
     $('projects').appendChild(c);
   });
+
+  // Video player (opens uploaded video files on the page)
+  const box = document.createElement('div');
+  box.className = 'vbox'; box.hidden = true;
+  box.innerHTML = '<div class="vwrap" role="dialog" aria-modal="true" aria-label="Video player"><button class="vclose" type="button" aria-label="Close video">&times;</button><video controls playsinline></video></div>';
+  document.body.appendChild(box);
+  const vid = box.querySelector('video');
+  const closeVid = () => { vid.pause(); vid.removeAttribute('src'); vid.load(); box.hidden = true; document.body.style.overflow = ''; };
+  document.querySelectorAll('[data-video]').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    vid.src = a.dataset.video; vid.setAttribute('aria-label', a.dataset.title || 'Video');
+    box.hidden = false; document.body.style.overflow = 'hidden'; vid.play().catch(() => {});
+  }));
+  box.addEventListener('click', e => { if (e.target === box || e.target.classList.contains('vclose')) closeVid(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !box.hidden) closeVid(); });
 
   // Experience
   EXPERIENCE.forEach(j => {

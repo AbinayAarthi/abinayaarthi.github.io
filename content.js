@@ -5,7 +5,7 @@
    ========================================================== */
 
 const SITE = {
-  name: "Abinaya Aarthi S.",
+  name: "ABINAYA AARTHI",
   role: "Video Editor | Former Deputy Chief Editor",
 
   showreel: "",   // paste a YouTube link here. While it is "", the Showreel section stays hidden.
@@ -65,10 +65,45 @@ const EXPERIENCE = [
    While this list is empty, the Projects section stays hidden.
    style: separate tags with commas, e.g. "Short-form, Motion graphics"
    thumbnail: image file name uploaded to GitHub, e.g. "thumb1.jpg" ("" = none)
-   link: your video link ("" = "Link coming soon")
+   link: your video link, or a video file uploaded next to this file, e.g. "reel-bridal.mp4" ("" = "Link coming soon")
 
    Example:
    { title: "Reel title", style: "Short-form, Premiere Pro", contribution: "What you personally did on this project.", link: "", thumbnail: "" }
 */
 const PROJECTS = [
+  {
+    title: "Bridal Prep Checklist",
+    style: "Short-form, Talking-head, Captions",
+    contribution: "Vertical Reel edited with styled captions, cutaway visuals and graphic callouts around a talking-head interview.",
+    link: "reel-bridal.mp4",
+    thumbnail: "thumb-bridal.jpg"
+  },
+  {
+    title: "Sugar vs Smoking: Which Damages You More?",
+    style: "Short-form, Talking-head, Motion graphics",
+    contribution: "Talking-head Reel with bold text callouts, B-roll and graphics that compare sugar and smoking.",
+    link: "reel-sugar.mp4",
+    thumbnail: "thumb-sugar.jpg"
+  },
+  {
+    title: "How Many Days Is a Normal Monthly Cycle?",
+    style: "Short-form, Talking-head, Motion graphics",
+    contribution: "Talking-head Reel with animated title graphics, captions and illustrative visuals that explain period length.",
+    link: "reel-cycle.mp4",
+    thumbnail: "thumb-cycle.jpg"
+  },
+  {
+    title: "Instagram and YouTube Hide It, X Revealed It",
+    style: "Short-form, Talking-head, Captions",
+    contribution: "Fast-paced talking-head Reel with Tamil-English captions, screen graphics and B-roll on the open-source algorithm.",
+    link: "reel-algo.mp4",
+    thumbnail: "thumb-algo.jpg"
+  },
+  {
+    title: "Use AI Responsibly",
+    style: "Short-form, Talking-head, Captions",
+    contribution: "Talking-head Reel with bold on-screen text and cutaway visuals on the risks of fake AI content.",
+    link: "reel-ai.mp4",
+    thumbnail: "thumb-ai.jpg"
+  }
 ];

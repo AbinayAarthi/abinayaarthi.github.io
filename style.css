@@ -101,3 +101,12 @@ footer{text-align:center;padding:2rem 1rem 3rem;border-top:1px solid var(--line)
 
 @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){h1{animation:none}html{scroll-behavior:auto}}
+
+.thumb{position:relative}
+.thumb.vid::after{content:"";position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(4,16,28,.62) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 6.5v11l9-5.5z'/%3E%3C/svg%3E") center/32px no-repeat;border:1px solid rgba(255,255,255,.35);pointer-events:none;transition:transform .2s}
+a.thumb.vid:hover::after{transform:scale(1.08)}
+.vbox{position:fixed;inset:0;z-index:100;background:rgba(2,6,12,.88);display:flex;align-items:center;justify-content:center;padding:1rem}
+.vbox[hidden]{display:none}
+.vwrap{position:relative;max-height:92vh;max-width:min(92vw,520px)}
+.vwrap video{display:block;max-height:88vh;max-width:100%;border-radius:12px;background:#000}
+.vclose{position:absolute;top:-2.4rem;right:0;background:none;border:0;color:#fff;font-size:2rem;line-height:1;cursor:pointer;padding:.2rem .5rem}
