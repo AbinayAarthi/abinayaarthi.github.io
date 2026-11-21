@@ -110,3 +110,8 @@ a.thumb.vid:hover::after{transform:scale(1.08)}
 .vwrap{position:relative;max-height:92vh;max-width:min(92vw,520px)}
 .vwrap video{display:block;max-height:88vh;max-width:100%;border-radius:12px;background:#000}
 .vclose{position:absolute;top:-2.4rem;right:0;background:none;border:0;color:#fff;font-size:2rem;line-height:1;cursor:pointer;padding:.2rem .5rem}
+
+/* Vertical project cards (9:16) */
+#projects{grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr))}
+#projects .thumb{aspect-ratio:9/16}
+#projects .card h3{font-size:1.05rem}

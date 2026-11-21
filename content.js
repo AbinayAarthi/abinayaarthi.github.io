@@ -119,5 +119,13 @@ const PROJECTS = [
     link: "reel-aijobs.mp4",
     start: 8,
     thumbnail: "thumb-aijobs.jpg"
+  },
+  {
+    title: "Green vs Ripe Banana: What's Healthier?",
+    style: "Short-form, Motion graphics, Talking-head",
+    contribution: "Talking-head Reel with an animated doctor-rating badge, unripe and ripe banana title graphics and news-clip visuals.",
+    link: "reel-banana.mp4",
+    start: 32.5,
+    thumbnail: "thumb-banana.jpg"
   }
 ];
