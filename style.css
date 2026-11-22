@@ -115,3 +115,5 @@ a.thumb.vid:hover::after{transform:scale(1.08)}
 #projects{grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr))}
 #projects .thumb{aspect-ratio:9/16}
 #projects .card h3{font-size:1.05rem}
+
+.frame video{display:block;width:100%;height:100%;object-fit:contain;background:#000}

@@ -8,8 +8,9 @@ const SITE = {
   name: "ABINAYA AARTHI",
   role: "Video Editor | Former Deputy Chief Editor",
 
-  showreel: "",   // paste a YouTube link here. While it is "", the Showreel section stays hidden.
-  showreelNote: "",
+  showreel: "showreel.mp4",   // a YouTube link, or a video file uploaded next to this file. "" hides the Showreel section.
+  showreelPoster: "showreel-poster.jpg",   // cover image shown before the video plays (video files only)
+  showreelNote: "60-second showreel: Cut. Check. Deliver.",
 
   resume: "resume.pdf",   // the resume.pdf file uploaded next to this file
 

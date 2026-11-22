@@ -20,7 +20,10 @@
 
   // Showreel
   const id = SITE.showreel && ytId(SITE.showreel);
-  $('reel').innerHTML = id
+  const isFile = /\.(mp4|webm)$/i.test(SITE.showreel || '');
+  $('reel').innerHTML = isFile
+    ? '<video controls preload="metadata" playsinline src="' + esc(SITE.showreel) + '"' + (SITE.showreelPoster ? ' poster="' + esc(SITE.showreelPoster) + '"' : '') + ' aria-label="Showreel"></video>'
+    : id
     ? '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '" title="Showreel" loading="lazy" allowfullscreen></iframe>'
     : SITE.showreel ? '<a class="ph" href="' + esc(SITE.showreel) + '" target="_blank" rel="noopener">Watch the showreel</a>'
     : '<div class="ph">Showreel video goes here</div>';
